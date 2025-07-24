@@ -1,0 +1,57 @@
+Misclassified Samples Analysis
+==================================================
+
+Total error samples: 919
+Error rate: 9.19%
+
+Most confident wrong predictions:
+  1. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9999
+  2. True: T-shirt/top , Predicted: Dress       , Confidence: 0.9997
+  3. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9995
+  4. True: T-shirt/top , Predicted: Dress       , Confidence: 0.9989
+  5. True: Trouser     , Predicted: Dress       , Confidence: 0.9979
+  6. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9960
+  7. True: Trouser     , Predicted: Dress       , Confidence: 0.9948
+  8. True: Pullover    , Predicted: Coat        , Confidence: 0.9937
+  9. True: Shirt       , Predicted: Pullover    , Confidence: 0.9934
+ 10. True: Shirt       , Predicted: Coat        , Confidence: 0.9914
+ 11. True: Shirt       , Predicted: Coat        , Confidence: 0.9913
+ 12. True: Ankle boot  , Predicted: Bag         , Confidence: 0.9901
+ 13. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9883
+ 14. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9876
+ 15. True: Shirt       , Predicted: Dress       , Confidence: 0.9851
+ 16. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9847
+ 17. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9841
+ 18. True: Trouser     , Predicted: Bag         , Confidence: 0.9832
+ 19. True: Sandal      , Predicted: Ankle boot  , Confidence: 0.9824
+ 20. True: Trouser     , Predicted: Dress       , Confidence: 0.9820
+ 21. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9812
+ 22. True: Trouser     , Predicted: Dress       , Confidence: 0.9797
+ 23. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9782
+ 24. True: Shirt       , Predicted: Pullover    , Confidence: 0.9778
+ 25. True: Shirt       , Predicted: Pullover    , Confidence: 0.9772
+ 26. True: Coat        , Predicted: Dress       , Confidence: 0.9763
+ 27. True: Shirt       , Predicted: Bag         , Confidence: 0.9736
+ 28. True: Trouser     , Predicted: Dress       , Confidence: 0.9731
+ 29. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9729
+ 30. True: Shirt       , Predicted: Pullover    , Confidence: 0.9695
+ 31. True: Pullover    , Predicted: Coat        , Confidence: 0.9668
+ 32. True: Trouser     , Predicted: Dress       , Confidence: 0.9658
+ 33. True: Shirt       , Predicted: Coat        , Confidence: 0.9634
+ 34. True: Shirt       , Predicted: Dress       , Confidence: 0.9601
+ 35. True: Coat        , Predicted: Dress       , Confidence: 0.9588
+ 36. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9578
+ 37. True: Shirt       , Predicted: Pullover    , Confidence: 0.9572
+ 38. True: T-shirt/top , Predicted: Coat        , Confidence: 0.9560
+ 39. True: Coat        , Predicted: Pullover    , Confidence: 0.9559
+ 40. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9554
+ 41. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9548
+ 42. True: Shirt       , Predicted: T-shirt/top , Confidence: 0.9543
+ 43. True: Coat        , Predicted: Pullover    , Confidence: 0.9531
+ 44. True: Shirt       , Predicted: Pullover    , Confidence: 0.9513
+ 45. True: Trouser     , Predicted: Dress       , Confidence: 0.9508
+ 46. True: Dress       , Predicted: Coat        , Confidence: 0.9493
+ 47. True: T-shirt/top , Predicted: Bag         , Confidence: 0.9490
+ 48. True: Shirt       , Predicted: T-shirt/top , Confidence: 0.9484
+ 49. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9478
+ 50. True: Shirt       , Predicted: Pullover    , Confidence: 0.9473
