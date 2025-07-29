@@ -1,6 +1,6 @@
-# Fashion-MNIST ResNet-18 Classification
+# CIFAR-10 ResNet-18 Classification
 
-A PyTorch implementation of ResNet-18 for Fashion-MNIST classification with 224x224 input resolution.
+A PyTorch implementation of ResNet-18 for CIFAR-10 classification with 224x224 input resolution.
 
 ## Project Structure
 
