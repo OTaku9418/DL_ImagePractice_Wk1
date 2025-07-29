@@ -6,9 +6,9 @@ from torch.utils.data import DataLoader, random_split
 import os
 
 
-class FashionMNISTDataLoader:
+class CIFAR10DataLoader:
     """
-    Fashion-MNIST data loader class
+    CIFAR-10 data loader class
     Handles data downloading, preprocessing, data augmentation and splitting
     Resizes images to 224x224 for ResNet compatibility
     """
@@ -30,11 +30,11 @@ class FashionMNISTDataLoader:
         
         # Ensure data directory exists
         os.makedirs(data_dir, exist_ok=True)
-        
-        # Fashion-MNIST class names
+
+        # CIFAR-10 class names
         self.class_names = [
-            'T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
-            'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot'
+            'plane', 'car', 'bird', 'cat', 'deer',
+            'dog', 'frog', 'horse', 'ship', 'truck'
         ]
         
         # Initialize data transforms
@@ -62,7 +62,6 @@ class FashionMNISTDataLoader:
                 scale=(0.9, 1.1)
             ),
             transforms.ToTensor(),                           # Convert to tensor
-            transforms.Lambda(lambda x: x.repeat(3, 1, 1)),  # Convert grayscale to 3-channel
             transforms.Normalize((0.485, 0.456, 0.406),      # ImageNet normalization
                                (0.229, 0.224, 0.225))        # for better transfer learning
         ])
@@ -71,19 +70,18 @@ class FashionMNISTDataLoader:
         self.test_transform = transforms.Compose([
             transforms.Resize((224, 224)),                   # Resize to 224x224
             transforms.ToTensor(),
-            transforms.Lambda(lambda x: x.repeat(3, 1, 1)),  # Convert grayscale to 3-channel
             transforms.Normalize((0.485, 0.456, 0.406),      # ImageNet normalization
                                (0.229, 0.224, 0.225))
         ])
     
     def _load_datasets(self):
         """
-        Load Fashion-MNIST dataset
+        Load CIFAR-10 dataset
         """
-        print("Loading Fashion-MNIST dataset...")
+        print("Loading CIFAR-10 dataset...")
         
         # Load complete training set
-        full_train_dataset = torchvision.datasets.FashionMNIST(
+        full_train_dataset = torchvision.datasets.CIFAR10(
             root=self.data_dir,
             train=True,
             download=True,
@@ -91,7 +89,7 @@ class FashionMNISTDataLoader:
         )
         
         # Load test set
-        self.test_dataset = torchvision.datasets.FashionMNIST(
+        self.test_dataset = torchvision.datasets.CIFAR10(
             root=self.data_dir,
             train=False,
             download=True,
@@ -108,7 +106,7 @@ class FashionMNISTDataLoader:
         )
         
         # Create validation set without data augmentation
-        val_dataset_base = torchvision.datasets.FashionMNIST(
+        val_dataset_base = torchvision.datasets.CIFAR10(
             root=self.data_dir,
             train=True,
             download=False,
@@ -191,10 +189,10 @@ class FashionMNISTDataLoader:
         }
 
 
-def create_fashion_mnist_dataloaders(data_dir="./data", batch_size=128, 
+def create_CIFAR10_dataloaders(data_dir="./data", batch_size=128, 
                                    num_workers=4, validation_split=0.1):
-    # Factory function to create Fashion-MNIST data loaders
-    dataloader = FashionMNISTDataLoader(
+    # Factory function to create CIFAR-10 data loaders
+    dataloader = CIFAR10DataLoader(
         data_dir=data_dir,
         batch_size=batch_size,
         num_workers=num_workers,
@@ -212,7 +210,7 @@ if __name__ == "__main__":
     print("Testing data loader...")
     
     # Create data loaders
-    train_loader, val_loader, test_loader, info = create_fashion_mnist_dataloaders(
+    train_loader, val_loader, test_loader, info = create_CIFAR10_dataloaders(
         batch_size=32, num_workers=2
     )
     

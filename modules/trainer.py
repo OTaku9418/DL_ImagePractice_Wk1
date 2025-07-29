@@ -47,7 +47,7 @@ class ModelTrainer:
         # Memory monitoring
         self.process = psutil.Process()
     
-    def setup_optimizer_and_criterion(self, learning_rate=0.001, weight_decay=1e-4):
+    def setup_optimizer_and_criterion(self, learning_rate=0.001, weight_decay=1e-4, max_epochs=10):
         # Setup optimizer and loss function
         
         # Use Adam optimizer
@@ -62,16 +62,16 @@ class ModelTrainer:
         # Use cross-entropy loss function
         self.criterion = nn.CrossEntropyLoss()
         
-        # Learning rate scheduler: StepLR, decay 0.2 every 2 epochs
-        self.scheduler = optim.lr_scheduler.StepLR(
+        # Learning rate scheduler: CosineAnnealingLR, smooth cosine decay
+        self.scheduler = optim.lr_scheduler.CosineAnnealingLR(
             self.optimizer, 
-            step_size=2, 
-            gamma=0.2
+            T_max=max_epochs,  # Set to the actual number of training epochs
+            eta_min=1e-6  # Minimum learning rate
         )
         
         print(f"Optimizer: Adam (lr={learning_rate}, weight_decay={weight_decay})")
         print(f"Loss function: CrossEntropyLoss")
-        print(f"Learning rate scheduler: StepLR (step_size=2, gamma=0.2)")
+        print(f"Learning rate scheduler: CosineAnnealingLR (T_max={max_epochs}, eta_min=1e-6)")
 
     def _get_memory_usage(self):
         

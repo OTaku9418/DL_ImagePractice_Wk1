@@ -10,7 +10,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import custom modules
 from models.resnet import create_resnet18
-from utils.data_loader import create_fashion_mnist_dataloaders
+from utils.data_loader import create_CIFAR10_dataloaders
 from modules.trainer import create_trainer
 from modules.evaluator import create_evaluator
 from utils.visualizer import create_visualizer
@@ -18,7 +18,7 @@ from utils.visualizer import create_visualizer
 
 def parse_arguments():
     # Parse command line arguments
-    parser = argparse.ArgumentParser(description='Fashion-MNIST ResNet-18 Training Program')
+    parser = argparse.ArgumentParser(description='CIFAR-10 ResNet-18 Training Program')
     
     # Data related parameters
     parser.add_argument('--data_dir', type=str, default='./data',
@@ -114,12 +114,12 @@ def load_model_checkpoint(model, checkpoint_path, device):
 def train_model(args, device):
     # Train model
     print("=" * 80)
-    print("Starting Fashion-MNIST Classification Model Training")
+    print("Starting CIFAR-10 Classification Model Training")
     print("=" * 80)
     
     # 1. Create data loaders
     print("\n1. Creating data loaders...")
-    train_loader, val_loader, test_loader, dataset_info = create_fashion_mnist_dataloaders(
+    train_loader, val_loader, test_loader, dataset_info = create_CIFAR10_dataloaders(
         data_dir=args.data_dir,
         batch_size=args.batch_size,
         num_workers=args.num_workers,
@@ -156,7 +156,8 @@ def train_model(args, device):
     print("\n4. Setting up optimizer and loss function...")
     trainer.setup_optimizer_and_criterion(
         learning_rate=args.learning_rate,
-        weight_decay=args.weight_decay
+        weight_decay=args.weight_decay,
+        max_epochs=args.epochs
     )
     
     # 5. Resume training if checkpoint specified
@@ -194,12 +195,12 @@ def train_model(args, device):
 def test_model(args, device):
     # Test model
     print("=" * 80)
-    print("Testing Fashion-MNIST Classification Model")
+    print("Testing CIFAR-10 Classification Model")
     print("=" * 80)
     
     # 1. Create data loaders
     print("\n1. Creating data loaders...")
-    _, _, test_loader, dataset_info = create_fashion_mnist_dataloaders(
+    _, _, test_loader, dataset_info = create_CIFAR10_dataloaders(
         data_dir=args.data_dir,
         batch_size=args.batch_size,
         num_workers=args.num_workers

@@ -1,57 +1,57 @@
 Misclassified Samples Analysis
 ==================================================
 
-Total error samples: 919
-Error rate: 9.19%
+Total error samples: 838
+Error rate: 8.38%
 
 Most confident wrong predictions:
-  1. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9999
-  2. True: T-shirt/top , Predicted: Dress       , Confidence: 0.9997
-  3. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9995
-  4. True: T-shirt/top , Predicted: Dress       , Confidence: 0.9989
-  5. True: Trouser     , Predicted: Dress       , Confidence: 0.9979
-  6. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9960
-  7. True: Trouser     , Predicted: Dress       , Confidence: 0.9948
-  8. True: Pullover    , Predicted: Coat        , Confidence: 0.9937
-  9. True: Shirt       , Predicted: Pullover    , Confidence: 0.9934
- 10. True: Shirt       , Predicted: Coat        , Confidence: 0.9914
- 11. True: Shirt       , Predicted: Coat        , Confidence: 0.9913
- 12. True: Ankle boot  , Predicted: Bag         , Confidence: 0.9901
- 13. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9883
- 14. True: Sneaker     , Predicted: Ankle boot  , Confidence: 0.9876
- 15. True: Shirt       , Predicted: Dress       , Confidence: 0.9851
- 16. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9847
- 17. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9841
- 18. True: Trouser     , Predicted: Bag         , Confidence: 0.9832
- 19. True: Sandal      , Predicted: Ankle boot  , Confidence: 0.9824
- 20. True: Trouser     , Predicted: Dress       , Confidence: 0.9820
- 21. True: Sneaker     , Predicted: Sandal      , Confidence: 0.9812
- 22. True: Trouser     , Predicted: Dress       , Confidence: 0.9797
- 23. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9782
- 24. True: Shirt       , Predicted: Pullover    , Confidence: 0.9778
- 25. True: Shirt       , Predicted: Pullover    , Confidence: 0.9772
- 26. True: Coat        , Predicted: Dress       , Confidence: 0.9763
- 27. True: Shirt       , Predicted: Bag         , Confidence: 0.9736
- 28. True: Trouser     , Predicted: Dress       , Confidence: 0.9731
- 29. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9729
- 30. True: Shirt       , Predicted: Pullover    , Confidence: 0.9695
- 31. True: Pullover    , Predicted: Coat        , Confidence: 0.9668
- 32. True: Trouser     , Predicted: Dress       , Confidence: 0.9658
- 33. True: Shirt       , Predicted: Coat        , Confidence: 0.9634
- 34. True: Shirt       , Predicted: Dress       , Confidence: 0.9601
- 35. True: Coat        , Predicted: Dress       , Confidence: 0.9588
- 36. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9578
- 37. True: Shirt       , Predicted: Pullover    , Confidence: 0.9572
- 38. True: T-shirt/top , Predicted: Coat        , Confidence: 0.9560
- 39. True: Coat        , Predicted: Pullover    , Confidence: 0.9559
- 40. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9554
- 41. True: T-shirt/top , Predicted: Shirt       , Confidence: 0.9548
- 42. True: Shirt       , Predicted: T-shirt/top , Confidence: 0.9543
- 43. True: Coat        , Predicted: Pullover    , Confidence: 0.9531
- 44. True: Shirt       , Predicted: Pullover    , Confidence: 0.9513
- 45. True: Trouser     , Predicted: Dress       , Confidence: 0.9508
- 46. True: Dress       , Predicted: Coat        , Confidence: 0.9493
- 47. True: T-shirt/top , Predicted: Bag         , Confidence: 0.9490
- 48. True: Shirt       , Predicted: T-shirt/top , Confidence: 0.9484
- 49. True: Sandal      , Predicted: Sneaker     , Confidence: 0.9478
- 50. True: Shirt       , Predicted: Pullover    , Confidence: 0.9473
+  1. True: cat         , Predicted: frog        , Confidence: 1.0000
+  2. True: car         , Predicted: truck       , Confidence: 1.0000
+  3. True: cat         , Predicted: frog        , Confidence: 0.9997
+  4. True: ship        , Predicted: plane       , Confidence: 0.9997
+  5. True: truck       , Predicted: plane       , Confidence: 0.9996
+  6. True: cat         , Predicted: deer        , Confidence: 0.9994
+  7. True: frog        , Predicted: deer        , Confidence: 0.9992
+  8. True: cat         , Predicted: dog         , Confidence: 0.9988
+  9. True: dog         , Predicted: deer        , Confidence: 0.9987
+ 10. True: plane       , Predicted: ship        , Confidence: 0.9986
+ 11. True: truck       , Predicted: plane       , Confidence: 0.9985
+ 12. True: bird        , Predicted: dog         , Confidence: 0.9983
+ 13. True: deer        , Predicted: frog        , Confidence: 0.9982
+ 14. True: deer        , Predicted: cat         , Confidence: 0.9981
+ 15. True: ship        , Predicted: plane       , Confidence: 0.9978
+ 16. True: car         , Predicted: ship        , Confidence: 0.9976
+ 17. True: plane       , Predicted: bird        , Confidence: 0.9972
+ 18. True: truck       , Predicted: car         , Confidence: 0.9966
+ 19. True: truck       , Predicted: car         , Confidence: 0.9963
+ 20. True: truck       , Predicted: car         , Confidence: 0.9948
+ 21. True: cat         , Predicted: bird        , Confidence: 0.9936
+ 22. True: bird        , Predicted: plane       , Confidence: 0.9932
+ 23. True: cat         , Predicted: frog        , Confidence: 0.9931
+ 24. True: bird        , Predicted: frog        , Confidence: 0.9931
+ 25. True: bird        , Predicted: plane       , Confidence: 0.9930
+ 26. True: truck       , Predicted: car         , Confidence: 0.9927
+ 27. True: bird        , Predicted: deer        , Confidence: 0.9927
+ 28. True: cat         , Predicted: deer        , Confidence: 0.9926
+ 29. True: ship        , Predicted: car         , Confidence: 0.9925
+ 30. True: plane       , Predicted: car         , Confidence: 0.9921
+ 31. True: car         , Predicted: truck       , Confidence: 0.9918
+ 32. True: cat         , Predicted: deer        , Confidence: 0.9913
+ 33. True: cat         , Predicted: dog         , Confidence: 0.9911
+ 34. True: car         , Predicted: truck       , Confidence: 0.9909
+ 35. True: dog         , Predicted: horse       , Confidence: 0.9905
+ 36. True: deer        , Predicted: horse       , Confidence: 0.9901
+ 37. True: ship        , Predicted: plane       , Confidence: 0.9898
+ 38. True: truck       , Predicted: car         , Confidence: 0.9895
+ 39. True: ship        , Predicted: plane       , Confidence: 0.9894
+ 40. True: cat         , Predicted: dog         , Confidence: 0.9893
+ 41. True: bird        , Predicted: frog        , Confidence: 0.9893
+ 42. True: cat         , Predicted: dog         , Confidence: 0.9890
+ 43. True: dog         , Predicted: deer        , Confidence: 0.9889
+ 44. True: truck       , Predicted: car         , Confidence: 0.9889
+ 45. True: truck       , Predicted: car         , Confidence: 0.9888
+ 46. True: bird        , Predicted: cat         , Confidence: 0.9881
+ 47. True: plane       , Predicted: truck       , Confidence: 0.9880
+ 48. True: ship        , Predicted: plane       , Confidence: 0.9879
+ 49. True: dog         , Predicted: cat         , Confidence: 0.9871
+ 50. True: frog        , Predicted: bird        , Confidence: 0.9870
